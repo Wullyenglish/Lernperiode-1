@@ -1,7 +1,5 @@
 # Lern-Periode 1
 
-28.8 bis ?
-
 ## Grob-Planung
 C# programm zum Voci lernen das verschiedene voci kann speichern und wieder geben
 ## 28.8.2026
