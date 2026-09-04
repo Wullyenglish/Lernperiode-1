@@ -10,5 +10,5 @@ Heute habe ich mit meinem C#-Programm zum Voci-Lernen angefangen. Ich habe ein H
 
 - [x] Beim Erstellen eines Voci-Sets die beiden Sprachen speichern
 - [x] Beim Lernen oder Bearbeiten eine Liste mit allen vorhandenen Voci-Sets anzeigen
-- [ ] Beim Auswählen eines Voci-Sets die gespeicherten Sprachen anzeigen und für die Abfrage verwenden
+- [x] Beim Auswählen eines Voci-Sets die gespeicherten Sprachen anzeigen und für die Abfrage verwenden
 - [ ] Die Sprache switchen welch das angezeigt wird und welche das man muss Reinschreiben
