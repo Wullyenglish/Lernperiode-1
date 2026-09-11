@@ -27,11 +27,11 @@ Console.WriteLine() habe ich durch MessageBox.Show() ersetzt, damit Ausgaben in 
 
 Zusätzlich habe ich noch eingebaut, dass falsche oder leere Eingaben abgefangen werden, Wörter bearbeitet oder gelöscht werden können, falsch beantwortete Wörter am Schluss nochmals kommen und nach dem Lernen die Trefferquote in Prozent angezeigt wird.
 
-##Hausaufgaben vom 11.9.2026
-- [ ] Ein neues Projekt plannen
-(Kalender importieren
-Termine anzeigen
-Prüfungen erkennen/markieren
+## Hausaufgaben vom 11.9.2026
+- [ ] Ein neues Projekt plannen mit:
+- Kalender importieren
+- Termine anzeigen
+- Prüfungen erkennen/markieren
 Prüfung direkt öffnen
 Lernkarten erstellen
 Lernkarten lernen
