@@ -14,7 +14,7 @@ Heute habe ich mit meinem C#-Programm zum Voci-Lernen angefangen. Ich habe ein H
 - [x] Die Sprache switchen welch das angezeigt wird und welche das man muss Reinschreiben
 Heute habe ich die Sprachen der Voci-Sets gespeichert, vorhandene Sets anzeigen lassen und die gespeicherten Sprachen beim Lernen und Bearbeiten verwendet. Ausserdem kann man jetzt auswählen, in welche Richtung man die Voci lernen möchte.
 
-## 16.9.2026
+## 11.9.2026
 
 - [x] Das Konsolenprojekt für Windows Forms vorbereiten
 - [x] In Program.cs ein Hauptfenster für den Voci-Trainer erstellen
@@ -27,4 +27,32 @@ Console.WriteLine() habe ich durch MessageBox.Show() ersetzt, damit Ausgaben in 
 
 Zusätzlich habe ich noch eingebaut, dass falsche oder leere Eingaben abgefangen werden, Wörter bearbeitet oder gelöscht werden können, falsch beantwortete Wörter am Schluss nochmals kommen und nach dem Lernen die Trefferquote in Prozent angezeigt wird.
 
+##Hausaufgaben vom 11.9.2026
+- [ ] Ein neues Projekt plannen
+(Kalender importieren
+Termine anzeigen
+Prüfungen erkennen/markieren
+Prüfung direkt öffnen
+Lernkarten erstellen
+Lernkarten lernen
+Multiple-Choice-Quiz erstellen
+Quiz spielen
+Falsche Fragen wiederholen
+Lernfortschritt anzeigen
+Trefferquote anzeigen
+Statistiken anzeigen
+Termine bearbeiten
+Termine löschen
+Lernkarten bearbeiten/löschen
+Quizfragen bearbeiten/löschen
+Erinnerungen
+Suche und Filter
+Dark Mode
+Backup / Daten exportieren und importieren)
+
+## 18.9.2026
+- [ ]
+- [ ]
+- [ ]
+- [ ] 
 
