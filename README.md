@@ -19,4 +19,11 @@ Heute habe ich die Sprachen der Voci-Sets gespeichert, vorhandene Sets anzeigen 
 - [x] Das Konsolenprojekt für Windows Forms vorbereiten
 - [x] In Program.cs ein Hauptfenster für den Voci-Trainer erstellen
 - [x] Buttons für Voci erstellen, lernen, hinzufügen und beenden einbauen
+
+Ich habe mein ursprüngliches Konsolenprogramm in eine einfache grafische Version umgebaut. Dabei habe ich die eigentliche Logik mit den Voci-Dateien, den if-Abfragen, Schleifen und dem Lernen weitgehend gleich gelassen.
+
+Console.WriteLine() habe ich durch MessageBox.Show() ersetzt, damit Ausgaben in kleinen Fenstern erscheinen. Console.ReadLine() habe ich durch Interaction.InputBox() ersetzt, damit Eingaben über ein Textfeld gemacht werden können. Für echte Auswahlen, zum Beispiel das Hauptmenü, die Lernrichtung oder die Auswahl eines Voci-Sets, habe ich Buttons verwendet.
+
+Zusätzlich habe ich noch eingebaut, dass falsche oder leere Eingaben abgefangen werden, Wörter bearbeitet oder gelöscht werden können, falsch beantwortete Wörter am Schluss nochmals kommen und nach dem Lernen die Trefferquote in Prozent angezeigt wird.
 - [x] Console.WriteLine und Console.ReadLine durch Fenster, Textfelder und Labels ersetzen
+
