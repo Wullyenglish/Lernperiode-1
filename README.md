@@ -27,6 +27,8 @@ Console.WriteLine() habe ich durch MessageBox.Show() ersetzt, damit Ausgaben in 
 
 Zusätzlich habe ich noch eingebaut, dass falsche oder leere Eingaben abgefangen werden, Wörter bearbeitet oder gelöscht werden können, falsch beantwortete Wörter am Schluss nochmals kommen und nach dem Lernen die Trefferquote in Prozent angezeigt wird.
 
+Und habe angefangen ein neues Projekt zu Planen das in die 2 Lernperiode wird gehen.
+
 ## Hausaufgaben vom 11.9.2026
 
 - [ ] Die wichtigsten Funktionen der App festlegen und priorisieren (für die Nächste Lern-Periode)
