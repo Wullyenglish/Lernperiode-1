@@ -16,7 +16,7 @@ Heute habe ich die Sprachen der Voci-Sets gespeichert, vorhandene Sets anzeigen 
 
 ## 16.9.2026
 
-- [ ] Das bisherige Konsolenprogramm in ein Windows-Forms-Programm umwandeln
-- [ ] Ein Hauptmenü mit Buttons für die verschiedenen Funktionen erstellen
-- [ ] Die bisherigen Funktionen wie Voci erstellen, lernen und bearbeiten mit der Oberfläche verbinden
-- [ ] Die Konsoleneingaben und -ausgaben durch Textfelder, Labels und andere Elemente ersetzen
+- [ ] Das bestehende Voci-Programm in Program.cs zu einem Windows-Forms-Programm umbauen
+- [ ] Ein Hauptfenster mit Buttons für die vorhandenen Funktionen erstellen
+- [ ] Die bisherigen Voci-Funktionen mit den Buttons verbinden
+- [ ] Console.WriteLine und Console.ReadLine durch Fenster, Textfelder und Labels ersetzen
