@@ -17,6 +17,6 @@ Heute habe ich die Sprachen der Voci-Sets gespeichert, vorhandene Sets anzeigen 
 ## 16.9.2026
 
 [x] Das Konsolenprojekt für Windows Forms vorbereiten
-[ ] In Program.cs ein Hauptfenster für den Voci-Trainer erstellen
+[x] In Program.cs ein Hauptfenster für den Voci-Trainer erstellen
 [ ] Buttons für Voci erstellen, lernen, hinzufügen und beenden einbauen
 [ ] Console.WriteLine und Console.ReadLine durch Fenster, Textfelder und Labels ersetzen
