@@ -28,31 +28,11 @@ Console.WriteLine() habe ich durch MessageBox.Show() ersetzt, damit Ausgaben in 
 Zusätzlich habe ich noch eingebaut, dass falsche oder leere Eingaben abgefangen werden, Wörter bearbeitet oder gelöscht werden können, falsch beantwortete Wörter am Schluss nochmals kommen und nach dem Lernen die Trefferquote in Prozent angezeigt wird.
 
 ## Hausaufgaben vom 11.9.2026
-- [ ] Ein neues Projekt plannen mit:
-- Kalender importieren
-- Termine anzeigen
-- Prüfungen erkennen/markieren
-Prüfung direkt öffnen
-Lernkarten erstellen
-Lernkarten lernen
-Multiple-Choice-Quiz erstellen
-Quiz spielen
-Falsche Fragen wiederholen
-Lernfortschritt anzeigen
-Trefferquote anzeigen
-Statistiken anzeigen
-Termine bearbeiten
-Termine löschen
-Lernkarten bearbeiten/löschen
-Quizfragen bearbeiten/löschen
-Erinnerungen
-Suche und Filter
-Dark Mode
-Backup / Daten exportieren und importieren)
 
+- [ ] Die wichtigsten Funktionen der App festlegen und priorisieren
+      
 ## 18.9.2026
-- [ ]
-- [ ]
-- [ ]
-- [ ] 
+
+- [ ] Den Aufbau der App mit Hauptmenü, Kalender, Lernkarten und Quiz planen
+- [ ] Überlegen, wie Termine, Prüfungen, Lernkarten und Quiz miteinander verbunden und gespeichert werden sollen
 
