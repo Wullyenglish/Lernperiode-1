@@ -29,10 +29,10 @@ Zusätzlich habe ich noch eingebaut, dass falsche oder leere Eingaben abgefangen
 
 ## Hausaufgaben vom 11.9.2026
 
-- [ ] Die wichtigsten Funktionen der App festlegen und priorisieren
+- [ ] Die wichtigsten Funktionen der App festlegen und priorisieren (für die Nächste Lern-Periode)
       
 ## 18.9.2026
 
-- [ ] Den Aufbau der App mit Hauptmenü, Kalender, Lernkarten und Quiz planen
-- [ ] Überlegen, wie Termine, Prüfungen, Lernkarten und Quiz miteinander verbunden und gespeichert werden sollen
+- [ ] Den Aufbau der App mit Hauptmenü, Kalender, Lernkarten und Quiz planen (für die Nächste Lern-Periode)
+- [ ] Überlegen, wie Termine, Prüfungen, Lernkarten und Quiz miteinander verbunden und gespeichert werden sollen (für die Nächste Lern-Periode)
 
