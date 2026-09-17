@@ -27,12 +27,13 @@ Console.WriteLine() habe ich durch MessageBox.Show() ersetzt, damit Ausgaben in 
 
 Zusätzlich habe ich noch eingebaut, dass falsche oder leere Eingaben abgefangen werden, Wörter bearbeitet oder gelöscht werden können, falsch beantwortete Wörter am Schluss nochmals kommen und nach dem Lernen die Trefferquote in Prozent angezeigt wird.
 
-Und habe angefangen ein neues Projekt zu Planen das in die 2 Lernperiode wird gehen.
-
 ## Hausaufgaben vom 11.9.2026
 
 - [ ] Beim Lernen eine zufällige Reihenfolge der Voci auswählen können
 - [ ] Doppelte Voci-Einträge verhindern
+
+Ich habe zwei neue Funktionen eingebaut. Man kann jetzt auswählen, ob die Voci normal oder zufällig kommen. Ausserdem werden doppelte Voci nicht mehr gespeichert.
+
     
 ## 18.9.2026
 
