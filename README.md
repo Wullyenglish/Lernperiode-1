@@ -31,10 +31,12 @@ Und habe angefangen ein neues Projekt zu Planen das in die 2 Lernperiode wird ge
 
 ## Hausaufgaben vom 11.9.2026
 
-- [ ] Die wichtigsten Funktionen der App festlegen und priorisieren (für die Nächste Lern-Periode)
-      
+- [ ] Beim Lernen eine zufällige Reihenfolge der Voci auswählen können
+- [ ] Doppelte Voci-Einträge verhindern
+    
 ## 18.9.2026
 
-- [ ] Den Aufbau der App mit Hauptmenü, Kalender, Lernkarten und Quiz planen (für die Nächste Lern-Periode)
-- [ ] Überlegen, wie Termine, Prüfungen, Lernkarten und Quiz miteinander verbunden und gespeichert werden sollen (für die Nächste Lern-Periode)
-
+- [ ] Ein ganzes Voci-Set umbenennen können
+- [ ] Ein ganzes Voci-Set löschen können
+- [ ] Einen Multiple-Choice-Lernmodus hinzufügen
+- [ ] Die letzte Trefferquote eines Voci-Sets speichern
