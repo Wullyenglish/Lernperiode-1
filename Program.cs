@@ -102,10 +102,21 @@ namespace Voci_Trainer
                             }
                             else
                             {
-                                File.AppendAllText(
-                                    dateiName,
-                                    wort1 + ";" + wort2 + Environment.NewLine
-                                );
+                                string neuerEintrag = wort1 + ";" + wort2;
+
+                                string[] vorhandeneWoerter = File.ReadAllLines(dateiName);
+
+                                if (vorhandeneWoerter.Skip(1).Contains(neuerEintrag))
+                                {
+                                    MessageBox.Show("Dieses Voci existiert bereits.");
+                                }
+                                else
+                                {
+                                    File.AppendAllText(
+                                        dateiName,
+                                        neuerEintrag + Environment.NewLine
+                                    );
+                                }
                             }
 
                             weiter = JaNein("Noch ein Wort hinzufügen?");
@@ -177,10 +188,21 @@ namespace Voci_Trainer
                             }
                             else
                             {
-                                File.AppendAllText(
-                                    dateiName,
-                                    wort1 + ";" + wort2 + Environment.NewLine
-                                );
+                                string neuerEintrag = wort1 + ";" + wort2;
+
+                                string[] vorhandeneWoerter = File.ReadAllLines(dateiName);
+
+                                if (vorhandeneWoerter.Skip(1).Contains(neuerEintrag))
+                                {
+                                    MessageBox.Show("Dieses Voci existiert bereits.");
+                                }
+                                else
+                                {
+                                    File.AppendAllText(
+                                        dateiName,
+                                        neuerEintrag + Environment.NewLine
+                                    );
+                                }
                             }
 
                             weiter = JaNein("Noch ein Wort hinzufügen?");
@@ -254,9 +276,23 @@ namespace Voci_Trainer
 
                         zeilen = zeilen.Skip(1).ToArray();
 
-                        Random random = new Random();
+                        int reihenfolge = Auswahl(
+                            "Welche Reihenfolge willst du lernen?",
+                            "Normale Reihenfolge",
+                            "Zufällige Reihenfolge"
+                        );
 
-                        zeilen = zeilen.OrderBy(x => random.Next()).ToArray();
+                        if (reihenfolge == 0)
+                        {
+                            continue;
+                        }
+
+                        if (reihenfolge == 2)
+                        {
+                            Random random = new Random();
+
+                            zeilen = zeilen.OrderBy(x => random.Next()).ToArray();
+                        }
 
                         if (richtung == 1)
                         {
