@@ -29,8 +29,8 @@ Zusätzlich habe ich noch eingebaut, dass falsche oder leere Eingaben abgefangen
 
 ## Hausaufgaben vom 11.9.2026
 
-- [ ] Beim Lernen eine zufällige Reihenfolge der Voci auswählen können
-- [ ] Doppelte Voci-Einträge verhindern
+- [x] Beim Lernen eine zufällige Reihenfolge der Voci auswählen können
+- [x] Doppelte Voci-Einträge verhindern
 
 Ich habe zwei neue Funktionen eingebaut. Man kann jetzt auswählen, ob die Voci normal oder zufällig kommen. Ausserdem werden doppelte Voci nicht mehr gespeichert.
 
