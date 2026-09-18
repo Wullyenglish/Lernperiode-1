@@ -49,3 +49,9 @@ Ich habe zwei neue Funktionen eingebaut. Man kann jetzt auswählen, ob die Voci 
 - [x] Ein ganzes Voci-Set umbenennen können
 - [x] Ein ganzes Voci-Set löschen können
 - [x] Die letzte Trefferquote eines Voci-Sets speichern
+
+Heute habe ich drei neue Funktionen eingebaut. Man kann jetzt ganze Voci-Sets umbenennen und löschen. Ausserdem wird die letzte Trefferquote gespeichert und später wieder angezeigt. Am schwierigsten war für mich, dass immer die richtige Datei ausgewählt und geändert wird. Auch das Speichern der Trefferquote war etwas schwierig, weil sie in der Datei bleiben musste.
+
+##Reflexion
+
+
