@@ -20,6 +20,7 @@ Heute habe ich mit meinem C#-Programm zum Voci-Lernen angefangen. Ich habe ein H
 - [x] Beim Lernen oder Bearbeiten eine Liste mit allen vorhandenen Voci-Sets anzeigen
 - [x] Beim Auswählen eines Voci-Sets die gespeicherten Sprachen anzeigen und für die Abfrage verwenden
 - [x] Die Sprache switchen welch das angezeigt wird und welche das man muss Reinschreiben
+      
 Heute habe ich die Sprachen der Voci-Sets gespeichert, vorhandene Sets anzeigen lassen und die gespeicherten Sprachen beim Lernen und Bearbeiten verwendet. Ausserdem kann man jetzt auswählen, in welche Richtung man die Voci lernen möchte.
 
 ## 11.9.2026
