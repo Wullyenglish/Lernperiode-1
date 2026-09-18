@@ -39,4 +39,4 @@ Ich habe zwei neue Funktionen eingebaut. Man kann jetzt auswählen, ob die Voci 
 
 - [x] Ein ganzes Voci-Set umbenennen können
 - [x] Ein ganzes Voci-Set löschen können
-- [ ] Die letzte Trefferquote eines Voci-Sets speichern
+- [x] Die letzte Trefferquote eines Voci-Sets speichern
