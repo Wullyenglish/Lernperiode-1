@@ -39,5 +39,4 @@ Ich habe zwei neue Funktionen eingebaut. Man kann jetzt auswählen, ob die Voci 
 
 - [ ] Ein ganzes Voci-Set umbenennen können
 - [ ] Ein ganzes Voci-Set löschen können
-- [ ] Einen Multiple-Choice-Lernmodus hinzufügen
 - [ ] Die letzte Trefferquote eines Voci-Sets speichern
