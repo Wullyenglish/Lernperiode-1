@@ -1,5 +1,11 @@
 # Lern-Periode 1
 
+## fertiges Projekt
+
+Mein Programm ist ein Voci-Trainer. Man kann Voci-Sets erstellen, bearbeiten und löschen. Beim Lernen werden die Wörter abgefragt und am Schluss sieht man die Trefferquote.
+<img width="400" height="318" alt="Bildschirmaufnahme 2026-09-18 161541" src="https://github.com/user-attachments/assets/9ce67d80-ec90-4f8a-8bd8-77d8389eb8e7" />
+
+
 ## Grob-Planung
 C# programm zum Voci lernen das verschiedene voci kann speichern und wieder geben
 ## 28.8.2026
