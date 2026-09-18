@@ -1,10 +1,10 @@
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace Voci_Trainer
 {
@@ -25,6 +25,8 @@ namespace Voci_Trainer
                     "Voci lernen",
                     "Wörter hinzufügen",
                     "Wörter bearbeiten / löschen",
+                    "Voci-Set umbenennen",
+                    "Voci-Set löschen",
                     "Programm beenden"
                 );
 
@@ -79,6 +81,7 @@ namespace Voci_Trainer
 
                         File.AppendAllText(
                             dateiName,
+                            // Kopfzeile: Sprache1;Sprache2, später optional ergänzt um die letzte Trefferquote.
                             vociSprache1 + ";" + vociSprache2 + Environment.NewLine
                         );
 
@@ -102,21 +105,10 @@ namespace Voci_Trainer
                             }
                             else
                             {
-                                string neuerEintrag = wort1 + ";" + wort2;
-
-                                string[] vorhandeneWoerter = File.ReadAllLines(dateiName);
-
-                                if (vorhandeneWoerter.Skip(1).Contains(neuerEintrag))
-                                {
-                                    MessageBox.Show("Dieses Voci existiert bereits.");
-                                }
-                                else
-                                {
-                                    File.AppendAllText(
-                                        dateiName,
-                                        neuerEintrag + Environment.NewLine
-                                    );
-                                }
+                                File.AppendAllText(
+                                    dateiName,
+                                    wort1 + ";" + wort2 + Environment.NewLine
+                                );
                             }
 
                             weiter = JaNein("Noch ein Wort hinzufügen?");
@@ -188,21 +180,10 @@ namespace Voci_Trainer
                             }
                             else
                             {
-                                string neuerEintrag = wort1 + ";" + wort2;
-
-                                string[] vorhandeneWoerter = File.ReadAllLines(dateiName);
-
-                                if (vorhandeneWoerter.Skip(1).Contains(neuerEintrag))
-                                {
-                                    MessageBox.Show("Dieses Voci existiert bereits.");
-                                }
-                                else
-                                {
-                                    File.AppendAllText(
-                                        dateiName,
-                                        neuerEintrag + Environment.NewLine
-                                    );
-                                }
+                                File.AppendAllText(
+                                    dateiName,
+                                    wort1 + ";" + wort2 + Environment.NewLine
+                                );
                             }
 
                             weiter = JaNein("Noch ein Wort hinzufügen?");
@@ -229,9 +210,25 @@ namespace Voci_Trainer
                         .Select(Path.GetFileNameWithoutExtension)
                         .ToArray();
 
+                    string[] vociAnzeige = new string[vociNamen.Length];
+
+                    for (int i = 0; i < vociDateien.Length; i++)
+                    {
+                        string[] ersteZeile = File.ReadLines(vociDateien[i]).First().Split(';');
+
+                        if (ersteZeile.Length >= 3)
+                        {
+                            vociAnzeige[i] = vociNamen[i] + " - Letzte Trefferquote: " + ersteZeile[2] + "%";
+                        }
+                        else
+                        {
+                            vociAnzeige[i] = vociNamen[i] + " - Noch keine Trefferquote";
+                        }
+                    }
+
                     int vociAuswahl = Auswahl(
                         "Welches Voci wollen Sie lernen?",
-                        vociNamen
+                        vociAnzeige
                     );
 
                     if (vociAuswahl == 0)
@@ -274,25 +271,13 @@ namespace Voci_Trainer
                             continue;
                         }
 
+                        // Die Kopfzeile enthält Metadaten und wird nicht abgefragt.
                         zeilen = zeilen.Skip(1).ToArray();
 
-                        int reihenfolge = Auswahl(
-                            "Welche Reihenfolge willst du lernen?",
-                            "Normale Reihenfolge",
-                            "Zufällige Reihenfolge"
-                        );
+                        Random random = new Random();
 
-                        if (reihenfolge == 0)
-                        {
-                            continue;
-                        }
-
-                        if (reihenfolge == 2)
-                        {
-                            Random random = new Random();
-
-                            zeilen = zeilen.OrderBy(x => random.Next()).ToArray();
-                        }
+                        // Zufällige Reihenfolge für jeden Lerndurchgang.
+                        zeilen = zeilen.OrderBy(x => random.Next()).ToArray();
 
                         if (richtung == 1)
                         {
@@ -365,7 +350,7 @@ namespace Voci_Trainer
                             }
                         }
 
-                        // Falsche Wörter nochmals
+                        // Die Wiederholung zählt nicht zur Trefferquote des ersten Durchgangs.
                         if (falscheWoerter.Count > 0)
                         {
                             MessageBox.Show(
@@ -420,15 +405,33 @@ namespace Voci_Trainer
                             }
                         }
 
-                        // Trefferquote
+                        // Die Umwandlung in double verhindert eine ganzzahlige Division.
                         double prozent = (double)richtig / insgesamt * 100;
+
+                        string[] alleZeilen = File.ReadAllLines(dateiName);
+
+                        string[] ersteZeile = alleZeilen[0].Split(';');
+
+                        string vorherigeQuote = "Noch keine";
+
+                        if (ersteZeile.Length >= 3)
+                        {
+                            vorherigeQuote = ersteZeile[2] + "%";
+                        }
+
+                        alleZeilen[0] = ersteZeile[0] + ";" + ersteZeile[1] + ";" + Math.Round(prozent);
+
+                        File.WriteAllLines(dateiName, alleZeilen);
 
                         MessageBox.Show(
                             "Du hattest " + richtig +
                             " von " + insgesamt +
                             " Wörtern richtig.\n" +
-                            "Trefferquote: " + Math.Round(prozent) + "%"
+                            "Aktuelle Trefferquote: " + Math.Round(prozent) + "%\n" +
+                            "Vorherige Trefferquote: " + vorherigeQuote
                         );
+
+
                     }
                     else
                     {
@@ -495,7 +498,7 @@ namespace Voci_Trainer
                         "Löschen"
                     );
 
-                    // Bearbeiten
+                    // Durch die Kopfzeile entspricht die Auswahl direkt dem Index in zeilen.
                     if (aktion == 1)
                     {
                         string[] wort = zeilen[wortAuswahl].Split(';');
@@ -536,8 +539,58 @@ namespace Voci_Trainer
                     }
                 }
 
+                // Voci umbenennen
+                else if (newVoci == 5)
+                {
+                    string[] vociDateien = Directory.GetFiles(".", "*.txt");
+
+                    string[] vociNamen = vociDateien
+                        .Select(Path.GetFileNameWithoutExtension)
+                        .ToArray();
+                    int vociAuswahl = Auswahl(
+                           "Welches Voci wollen Sie umbenennen?",
+                            vociNamen
+                    );
+
+                    if (vociAuswahl == 0)
+                    {
+                        continue;
+                    }
+
+                    string alterName = vociNamen[vociAuswahl - 1];
+
+                    string neuerName = Interaction.InputBox(
+                        "Neuer Name:",
+                        "Voci Trainer"
+                        );
+
+                    File.Move(alterName + ".txt", neuerName + ".txt");
+                }
+                // Voci löschen
+                else if (newVoci == 6)
+                {
+                    string[] vociDateien = Directory.GetFiles(".", "*.txt");
+
+                    string[] vociNamen = vociDateien
+                        .Select(Path.GetFileNameWithoutExtension)
+                        .ToArray();
+
+                    int vociAuswahl = Auswahl(
+                           "Welches Voci wollen Sie löschen?",
+                            vociNamen
+                    );
+
+                    if (vociAuswahl == 0)
+                    {
+                        continue;
+                    }
+                    string vociName = vociNamen[vociAuswahl - 1];
+
+                    File.Delete(vociName + ".txt");
+
+                }
                 // Programm beenden
-                else if (newVoci == 5 || newVoci == 0)
+                else if (newVoci == 7 || newVoci == 0)
                 {
                     break;
                 }
@@ -560,6 +613,7 @@ namespace Voci_Trainer
         }
 
 
+        // Liefert die gewählte Option ab 1; beim Schließen ohne Auswahl bleibt der Wert 0.
         static int Auswahl(string frage, params string[] optionen)
         {
             int auswahl = 0;
@@ -587,6 +641,7 @@ namespace Voci_Trainer
                 button.Size = new Size(300, 40);
                 button.Location = new Point(40, 55 + i * 45);
 
+                // Eigene Variable pro Durchlauf, damit jeder Klick die passende Nummer verwendet.
                 int nummer = i + 1;
 
                 button.Click += (sender, e) =>
