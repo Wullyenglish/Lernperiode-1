@@ -54,4 +54,4 @@ Heute habe ich drei neue Funktionen eingebaut. Man kann jetzt ganze Voci-Sets um
 
 ##Reflexion
 
-
+In dieser Lern-Periode habe ich mit meinem Voci-Trainer angefangen und ihn danach Schritt für Schritt erweitert. Am Anfang war es nur ein einfaches Konsolenprogramm und am Ende hatte ich ein Programm mit Fenstern, Buttons und mehreren Funktionen. Oft wusste ich schon, was ich machen wollte, aber nicht genau, wie ich es programmieren kann. Dann habe ich zuerst auf W3Schools gesucht. Wenn ich dort nichts gefunden habe, habe ich ChatGPT gefragt, wie ich meine Idee in Code umsetzen kann. Schwierig waren für mich vor allem die Textdateien und das Speichern von Daten. Ich habe gemerkt, dass es für mich am besten funktioniert, wenn ich immer nur eine neue Funktion einbaue und sie danach direkt teste. So konnte ich Fehler einfacher finden und habe dabei mehr über C# gelernt.
